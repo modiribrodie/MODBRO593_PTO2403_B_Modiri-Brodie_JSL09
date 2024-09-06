@@ -34,10 +34,10 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 	<p>👇: $${data.market_data.low_24h.usd}</p>
 `
 	})
+.catch(err => console.error(err)) //consoles any errors that could occur
 
-
-       
-    .catch(err => console.error(err)) //consoles any errors that could occur
+const date = new Date()
+console.log(date.toLocaleTimeString("en-us", {timeStyle: "short"}))
 
 	
 /**
