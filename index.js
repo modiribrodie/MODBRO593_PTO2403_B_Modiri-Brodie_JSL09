@@ -24,6 +24,10 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
         return res.json()
     })
     .then(data => {
+
+
+
+		
         console.log(data) }) //logged data retrieved from CoinGecko Api
     .catch(err => console.error(err)) //consoles any errors that could occur
 /**
