@@ -24,12 +24,17 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
         return res.json()
     })
     .then(data => {
+		document.getElementById("crypto").innerHTML = `
+		<img src=${data.image.small} />
+		<span>${data.name}</span>
+	`
 
 
 
-		
         console.log(data) }) //logged data retrieved from CoinGecko Api
     .catch(err => console.error(err)) //consoles any errors that could occur
+
+	
 /**
  * {
 	id: "KMn4VEeEPR8",
@@ -114,4 +119,4 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 	downloads: 1237140
 }
 /index.html
- */
+ */ 
