@@ -16,8 +16,15 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
     })
 
 	fetch("https://api.coingecko.com/api/v3/coins/dogecoin") //cryptocurrency data
-	.then(res => res.json())
-    .then(data => console.log(data)) //logged data retrieved from CoinGecko Api
+	.then(res => {
+        if (!res.ok) {
+            throw Error("Something went wrong")
+        }
+		console.log(res.status)
+        return res.json()
+    })
+    .then(data => {
+        console.log(data) }) //logged data retrieved from CoinGecko Api
     .catch(err => console.error(err)) //consoles any errors that could occur
 /**
  * {
